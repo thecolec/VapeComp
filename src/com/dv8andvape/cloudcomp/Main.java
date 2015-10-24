@@ -22,6 +22,9 @@ public class Main {
 	public static String temprequest;
 	public static String[] matches;
 	
+	public static Match[] rounds;
+	public static Player[] players;
+	
 	public static String[] matchesID;
 	public static String[] namesID;
 	
@@ -204,10 +207,14 @@ public class Main {
 		int index = input.indexOf("\"id\":");
 		int count = 0;
 		while (index != -1) {
-			System.out.println(input.substring(index+5, index+13));
+			matchesID[count] = input.substring(index+5, index+13);
 		    count++;
 		    input = input.substring(index + 1);
 		    index = input.indexOf("\"id\":");
 		}
 	}
+	public static void loadPlayers(String names[]){
+		
+	}
+	
 }
